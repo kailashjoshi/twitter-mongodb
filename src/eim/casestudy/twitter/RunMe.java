@@ -15,7 +15,7 @@ public class RunMe {
 		oathSignature = OathSignature.generateOauthSignature(searchKeyword);
 		String header = OathHeader.header(searchKeyword, oathSignature);
 		String body = OathBody.body(searchKeyword);
-		OathHttpClient.makeHttpRequest(header, body);
+		OathHttpClient.httpRequest(header, body);
 	}
 
 	public static void main(String[] args) {
