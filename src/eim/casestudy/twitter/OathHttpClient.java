@@ -95,13 +95,13 @@ public class OathHttpClient {
 				}				
 			}
 
-		} catch (Exception ioe) {
-			ioe.printStackTrace();
+		} catch (Exception e) {
+			e.printStackTrace();
 
 		} finally {
 			try {
 				connection.close();
-			} catch (IOException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
