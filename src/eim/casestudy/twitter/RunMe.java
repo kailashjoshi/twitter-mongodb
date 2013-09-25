@@ -9,12 +9,12 @@ public class RunMe {
      * Driver method for starting Public Streaming
      * @param status
      */
-	public static void getTwitterStream(String status) {
+	public static void getTwitterStream(String searchKeyword) {
 
 		String oathSignature = null;
-		oathSignature = OathSignature.generateOauthSignature(status);
-		String header = OathHeader.header(status, oathSignature);
-		String body = OathBody.body(status);
+		oathSignature = OathSignature.generateOauthSignature(searchKeyword);
+		String header = OathHeader.header(searchKeyword, oathSignature);
+		String body = OathBody.body(searchKeyword);
 		OathHttpClient.makeHttpRequest(header, body);
 	}
 
