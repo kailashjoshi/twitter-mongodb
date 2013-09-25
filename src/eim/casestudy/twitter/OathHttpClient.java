@@ -46,7 +46,7 @@ public class OathHttpClient {
  * @param authHeader
  * @param requestBody
  */
-	public static void makeHttpRequest(String authHeader, String requestBody) {
+	public static void httpRequest(String authHeader, String requestBody) {
 		setHttpParam();
 		setProcessor();
 		HttpContext context = new BasicHttpContext(null);
